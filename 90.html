@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Time Machine</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css"> 
+  <style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+    .space {
+      padding-top: 6em;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="70.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">70's & 80's</a>
+    <a href="90.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">90's & 2000's</a>
+    <a href="2010.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">2010's & 2020's</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="Under.html" class="w3-bar-item w3-button">Under Rated</a>
+        <a href="Top.html" class="w3-bar-item w3-button">Top Rated</a>
+        <a href="Media.html" class="w3-bar-item w3-button">Media</a>
+      </div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="70.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">70's & 80's</a>
+  <a href="90.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">90's & 2000's</a>
+  <a href="2010.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">2010's & 2020's</a>
+  <a href="Media.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MORE</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  </div>
+
+  <div class="color">
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <img src="images/Xmen.jpg" alt="Xmen" width="100%" height="100%">
+      <h2 class="w3-wide"><u>90's & 2000's</u></h2>
+      <p class="w3-opacity"></p><b>Gaming through the ages</b>
+      <p class="w3-justify">Moving into the 90’s brough vast changes to the video game industry. They came out with revolutionary systems like Nintendo 64, The original Play Station, Super Nintendo and Saga Saturn.</p> 
+        <p>Then the new Millenia came about, bringing with it systems that made games what they are today. Systems like the Xbox 360, creating a host of online gaming. Nintendo came out with the Wii a system which used motion sticks to play on your screen. </p>
+      <p> PlayStation came out with 2 and 3 in the same decade creating a surge in Sony players. The PlayStation 2 in my opinion is the most durable and repayable system ever made. 
+        This is the time when Microsoft and Sony were in vast competition to corner the market of video games. They did a pretty good job but Nintendo was always fast on their heels. </p>
+
+      <div class="space">
+      <img src="images/Halo.jpg" alt="Halo" width="100%" height="100%">
+      </div>
+
+      <div class="space">
+        <img src="images/ff10.jpg" alt="ff10" width="100%" height="100%">
+      </div>
+
+      <div class="space">
+        <img src="images/Zelda.jpg" alt="Zelda" width="100%" height="100%">
+      </div>
+
+      <a href="90.html"> Top</a>
+
+      <script>
+      // Automatic Slideshow - change image every 4 seconds
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000);    
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      var modal = document.getElementById('ticketModal');
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>

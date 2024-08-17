@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Time Machine</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css"> 
+  <style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+    * {
+      box-sizing: border-box;
+    }
+
+    .column {
+      float: left;
+      width: 50%;
+      padding: 5px;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .space {
+      padding-top: 6em;
+    }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" 
+   href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="70.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">70's & 80's</a>
+    <a href="90.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">90's & 2000's</a>
+    <a href="2010.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">2010's & 2020's</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="Under.html" class="w3-bar-item w3-button">Under Rated</a>
+        <a href="Top.html" class="w3-bar-item w3-button">Top Rated</a>
+        <a href="Media.html" class="w3-bar-item w3-button">Media</a>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="70.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">70's & 80's</a>
+  <a href="90.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">90's & 2000's</a>
+  <a href="2010.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">2010's & 2020's</a>
+   <a href="Media.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MORE</a>
+</div>
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
+  </div>
+
+    <div class="color">
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+      <img src="images/Arcade.jpg" alt="Arcade" width="90%" height="100%">
+      <h2 class="w3-wide"><u>70's & 80's</u></h2>
+      <p class="w3-opacity"></p><b>Gaming through the ages</b>
+      <p class="w3-justify"> The 70's and 80's were the birth decades for gaming. The first consoles were the Atari 2600 and The Magnavox Odyssey. Arcade games were also a giant success, sparking lifelong interest in the gaming world. This was only the beginning, with games like computer space, and pong. </p>
+       <p> The Magnavox Odyssey was released in 1972 and came with only a few games prebuilt into the system. Televisions were still relatively small, and the picture quality was still advancing. This made it easy for systems like The Magnavox and Atari to take off. </p>
+       <p> Some of the first arcade games to really make an impact were brought about in the 80’s. Games like Pac Man, Centipede, Galaga, and many others. Gaming at home was interesting, new and fun, but the experience of an arcade was like nothing people had ever known before. Challenges were made, money won and lost, pride broken, and quarters gobbled by flashing machines.</p> 
+     <p>   Jumping ahead in time to the mid 80’s the NES and Saga Genisis came to light with games that to this day still rule the virtual world. Games like Super Mario, Sonic the Hedge hog and Zelda. These games made such a profonde impact that they still are some of the most bought games today. </p>
+       <p> There were many off shoots of these systems, like Saga CD, Nintendo Gameboy one of the first hand held gaming devices, and more. Games will always come and go but the classics will always remain. </p>
+      <div class="row">
+        <div class="column">
+   <img src="images/Atari2600.jpg" alt="Atari 2600" style="width:100%">
+        </div>
+          <div class="column">
+          <img src="images/Odyssey.jpg" alt="Odyssey" style="width:89%">
+          </div>
+      </div>
+      <div class="space">
+      <img src="images/NES.jpg" alt="NES" style="width:98%">
+      </div>
+      <div class="space">
+      <img  src="images/Sagas.jpg" alt="Saga Genisis" style="width:98%">
+      </div>
+      <footer class="space">
+
+        <img src="images/Banner.png" alt="Banner" style="width:100%">
+
+        <a href="70.html"> Top</a>
+      </footer>
+
+      <script>
+      // Automatic Slideshow - change image every 4 seconds
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000);    
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function myFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      var modal = document.getElementById('ticketModal');
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      </script>
